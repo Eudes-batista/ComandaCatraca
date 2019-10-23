@@ -44,6 +44,12 @@ public class ConectaBanco {
     public void desconecta() {
 
         try {
+            if(this.stm != null){
+                this.stm.close();
+            }
+            if(this.rs != null){
+                this.rs.close();
+            }
             if (conn != null) {
                 conn.close();
             }
