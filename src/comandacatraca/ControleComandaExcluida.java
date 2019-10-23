@@ -41,7 +41,7 @@ public class ControleComandaExcluida {
             return;
         }
         try (PreparedStatement pst = this.conecta.getConn().prepareStatement("delete from COMANDAS_EXCLUIDAS where comanda ='" + comanda + "'")) {
-            pst.execute();
+             pst.execute();
             this.conecta.getConn().commit();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao apagar comanda no banco de dados do servidor.\n Verifique se tem comunicação de rede ou se o servidor está ligado.");
