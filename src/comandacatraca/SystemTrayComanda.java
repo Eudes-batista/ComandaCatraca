@@ -47,7 +47,7 @@ public class SystemTrayComanda {
             Runnable runnable = () -> {
                 while (true) {
                     try {
-                        Thread.sleep(900);
+                        Thread.sleep(100);
                     } catch (InterruptedException ex) {
                         JOptionPane.showMessageDialog(null, "Erro ao pausa 900 milliseconds");
                     }
@@ -57,7 +57,7 @@ public class SystemTrayComanda {
                         List<String> comandas = controleComandaExcluida.listarComandasExcluidas();
                         comandas.forEach(comanda -> {
                             boolean criarArquivoXML = geradoDeArquivoXMLCatraca.criarArquivoXML(comanda, "L");
-                            if (criarArquivoXML) {
+                            if(criarArquivoXML){
                                 controleComandaExcluida.excluirComanda(comanda);
                             }
                         });
