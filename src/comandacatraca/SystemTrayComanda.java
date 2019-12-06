@@ -47,7 +47,7 @@ public class SystemTrayComanda {
             Runnable runnable = () -> {
                 while (true) {
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(900);
                     } catch (InterruptedException ex) {
                         JOptionPane.showMessageDialog(null, "Erro ao pausa 900 milliseconds");
                     }

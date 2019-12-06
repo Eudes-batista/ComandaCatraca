@@ -24,14 +24,12 @@ public class GeradoDeArquivoXMLCatraca {
             JOptionPane.showMessageDialog(null, "Erro ao buscar informação do arquivo de configuração.");
         }
         File file = new File(caminho + "\\IMPORTESECULLUM.xml");
-        if (!file.exists()) {
-            try {
-                file.createNewFile();
-                this.escreverArquivoXML(file, comanda, status);
-                return true;
-            } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "Erro ao criar arquivo de configuração");
-            }
+        try {
+            file.createNewFile();
+            this.escreverArquivoXML(file, comanda, status);
+            return true;
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao criar arquivo de configuração");
         }
         return false;
     }
