@@ -3,7 +3,6 @@ package teste;
 
 import comandacatraca.GeradoDeArquivoXMLCatraca;
 
-
 public class TesteConexaoBancoFirebird {
     public static void main(String[] args) {
                      
